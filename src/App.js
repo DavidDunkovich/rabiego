@@ -1,24 +1,13 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Header, Embed } from 'semantic-ui-react';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{backgroundImage: 'url(heartsbg.png)', height: '100%', width: '100%'}}>
+      <Header as='h1' textAlign='center' style={{padding: '2em 0 1em 0'}} color='blue'>To Mr and Mrs Rabiego</Header>
+      <div style={{width: '50%', margin: '0 auto'}}>
+        <Embed />
+      </div>
     </div>
   );
 }
