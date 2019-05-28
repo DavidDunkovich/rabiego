@@ -11,6 +11,7 @@ class App extends Component {
   }
   componentDidMount() {
     scroll.scrollToTop();
+    this.videoRef.current.muted = false;
   }
 
   toggleVideo = () => {
@@ -48,7 +49,7 @@ class App extends Component {
               </div>
           </div>
         </div>
-        <video loop autoPlay className="video" ref={this.videoRef} src="/test.mp4" type="video/mp4" onClick={this.toggleVideo}>
+        <video className="video" muted ref={this.videoRef} src="/test.mp4" type="video/mp4" onClick={this.toggleVideo}>
           Your browser does not support this streaming content.
         </video> 
       </>
