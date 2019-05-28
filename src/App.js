@@ -1,15 +1,59 @@
-import React from 'react';
-import { Header, Embed } from 'semantic-ui-react';
+import React, { Component } from 'react';
+import { Link, animateScroll as scroll } from "react-scroll";
+class App extends Component {
+  
+  constructor(props) {
+    super(props);
+    this.videoRef = React.createRef();
+    this.state = {
+      playing: false
+    }
+  }
+  componentDidMount() {
+    scroll.scrollToTop();
+  }
 
-function App() {
-  return (
-    <div style={{backgroundImage: 'url(heartsbg.png)', height: '100%', width: '100%'}}>
-      <Header as='h1' textAlign='center' style={{padding: '2em 0 1em 0'}} color='blue'>To Mr and Mrs Rabiego</Header>
-      <div style={{width: '50%', margin: '0 auto'}}>
-        <Embed />
-      </div>
-    </div>
-  );
+  toggleVideo = () => {
+    this.setState(prevState => ({playing: !prevState.playing}), () => {
+      this.state.playing ? this.playVideo() : this.pauseVideo()
+    })
+  }
+  
+  playVideo = () => {
+    this.videoRef.current.play();
+    scroll.scrollToBottom();
+  }
+
+  pauseVideo = () => {
+    this.videoRef.current.pause();
+    scroll.scrollToTop();
+  }
+
+  render () {
+    const {playing} = this.state;
+
+    return (
+      <>
+        <div className='home' style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+          <div>
+            <h1>To</h1>
+            <h1>Mr and Mrs</h1>
+            <h1>Rabiego</h1>
+            <div style={{textAlign: 'center', marginTop: '2em'}}>
+              {!playing ?
+                <i className="far fa-play-circle" style={{fontSize: '12vh', cursor: 'pointer', color: '#4bc0c8'}} onClick={this.toggleVideo}></i>
+              :
+                <i className="far fa-pause-circle" style={{fontSize: '12vh', cursor: 'pointer', color: '#4bc0c8'}} onClick={this.toggleVideo}></i>
+              }
+              </div>
+          </div>
+        </div>
+        <video className="video" ref={this.videoRef} src="/test.mp4" type="video/mp4" onClick={this.toggleVideo}>
+          Your browser does not support this streaming content.
+        </video> 
+      </>
+    );
+  }
 }
 
 export default App;
