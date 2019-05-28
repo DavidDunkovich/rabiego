@@ -37,13 +37,13 @@ class App extends Component {
         <div className='home' style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
           <div>
             <h1>To</h1>
-            <h1>Mr and Mrs</h1>
+            <h1>Mr & Mrs</h1>
             <h1>Rabiego</h1>
             <div style={{textAlign: 'center', marginTop: '2em'}}>
               {!playing ?
-                <i className="far fa-play-circle" style={{fontSize: '12vh', cursor: 'pointer', color: '#4bc0c8'}} onClick={this.toggleVideo}></i>
+                <i className="far fa-play-circle" style={{fontSize: '8vw', cursor: 'pointer', color: '#4bc0c8'}} onClick={this.toggleVideo}></i>
               :
-                <i className="far fa-pause-circle" style={{fontSize: '12vh', cursor: 'pointer', color: '#4bc0c8'}} onClick={this.toggleVideo}></i>
+                <i className="far fa-pause-circle" style={{fontSize: '8vw', cursor: 'pointer', color: '#4bc0c8'}} onClick={this.toggleVideo}></i>
               }
               </div>
           </div>
