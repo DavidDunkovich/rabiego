@@ -48,7 +48,7 @@ class App extends Component {
               </div>
           </div>
         </div>
-        <video className="video" ref={this.videoRef} src="test.mp4" type="video/mp4" onClick={this.toggleVideo}>
+        <video className="video" controls muted ref={this.videoRef} src="test.mp4" type="video/mp4" onClick={this.toggleVideo}>
           Your browser does not support this streaming content.
         </video> 
       </>
