@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { animateScroll as scroll } from "react-scroll";
-import { Player } from 'video-react';
 class App extends Component {
   
   constructor(props) {
@@ -49,7 +48,7 @@ class App extends Component {
               </div>
           </div>
         </div>
-        <video className="video" muted controls ref={this.videoRef} src={'https://media.w3.org/2010/05/sintel/trailer_hd.mp4'} type="video/mp4" onClick={this.toggleVideo}>
+        <video className="video" ref={this.videoRef} src={'https://media.w3.org/2010/05/sintel/trailer_hd.mp4'} type="video/mp4" onClick={this.toggleVideo}>
           Your browser does not support this streaming content.
         </video> 
       </>
