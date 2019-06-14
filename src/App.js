@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { animateScroll as scroll } from "react-scroll";
 import { Embed } from 'semantic-ui-react';
 class App extends Component {
-  
+
   componentDidMount() {
     scroll.scrollToTop();
   }
@@ -25,7 +25,7 @@ class App extends Component {
               </div>
           </div>
         </div>
-        <Embed className="video" id='JBIjStILH9E' active={true} source='youtube' />
+        <Embed className="video" id='342157577' placeholder='./happy.jpg' source='vimeo' />
       </>
     );
   }
