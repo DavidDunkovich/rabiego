@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/rabiego/static/css/main.4ac5cb3e.chunk.css",
+    "main.js": "/rabiego/static/js/main.6c01acb7.chunk.js",
+    "main.js.map": "/rabiego/static/js/main.6c01acb7.chunk.js.map",
+    "runtime~main.js": "/rabiego/static/js/runtime~main.7654c5cb.js",
+    "runtime~main.js.map": "/rabiego/static/js/runtime~main.7654c5cb.js.map",
+    "static/css/2.ec3eb1c8.chunk.css": "/rabiego/static/css/2.ec3eb1c8.chunk.css",
+    "static/js/2.816e89c0.chunk.js": "/rabiego/static/js/2.816e89c0.chunk.js",
+    "static/js/2.816e89c0.chunk.js.map": "/rabiego/static/js/2.816e89c0.chunk.js.map",
+    "index.html": "/rabiego/index.html",
+    "precache-manifest.047ca8e10480cf72d434bee08e2f1db6.js": "/rabiego/precache-manifest.047ca8e10480cf72d434bee08e2f1db6.js",
+    "service-worker.js": "/rabiego/service-worker.js",
+    "static/css/2.ec3eb1c8.chunk.css.map": "/rabiego/static/css/2.ec3eb1c8.chunk.css.map",
+    "static/css/main.4ac5cb3e.chunk.css.map": "/rabiego/static/css/main.4ac5cb3e.chunk.css.map",
+    "static/media/semantic.min.css": "/rabiego/static/media/outline-icons.ef60a4f6.woff"
+  }
+}
