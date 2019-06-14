@@ -1,36 +1,17 @@
 import React, { Component } from 'react';
 import { animateScroll as scroll } from "react-scroll";
+import { Embed } from 'semantic-ui-react';
 class App extends Component {
   
-  constructor(props) {
-    super(props);
-    this.videoRef = React.createRef();
-    this.state = {
-      playing: false
-    }
-  }
   componentDidMount() {
     scroll.scrollToTop();
   }
 
   toggleVideo = () => {
-    this.setState(prevState => ({playing: !prevState.playing}), () => {
-      this.state.playing ? this.playVideo() : this.pauseVideo()
-    })
-  }
-  
-  playVideo = () => {
-    this.videoRef.current.play();
-    scroll.scrollToBottom();
-  }
-
-  pauseVideo = () => {
-    this.videoRef.current.pause();
-    scroll.scrollToTop();
+    scroll.scrollToBottom()
   }
 
   render () {
-    const {playing} = this.state;
 
     return (
       <>
@@ -40,17 +21,11 @@ class App extends Component {
             <h1>Mr & Mrs</h1>
             <h1>Rabiego</h1>
             <div style={{textAlign: 'center', marginTop: '2em'}}>
-              {!playing ?
-                <i className="far fa-play-circle" style={{fontSize: '8vw', cursor: 'pointer', color: '#4bc0c8'}} onClick={this.toggleVideo}></i>
-              :
-                <i className="far fa-pause-circle" style={{fontSize: '8vw', cursor: 'pointer', color: '#4bc0c8'}} onClick={this.toggleVideo}></i>
-              }
+              <i className="far fa-play-circle" style={{fontSize: '8vw', cursor: 'pointer', color: '#4bc0c8'}} onClick={this.toggleVideo}></i>
               </div>
           </div>
         </div>
-        <video className="video" ref={this.videoRef} src={'https://media.w3.org/2010/05/sintel/trailer_hd.mp4'} type="video/mp4" onClick={this.toggleVideo}>
-          Your browser does not support this streaming content.
-        </video> 
+        <Embed className="video" id='JBIjStILH9E' active={true} source='youtube' />
       </>
     );
   }
