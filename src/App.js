@@ -3,19 +3,26 @@ import { animateScroll as scroll } from "react-scroll";
 import { Embed } from 'semantic-ui-react';
 class App extends Component {
 
+  constructor(props) {
+    super(props);
+    this.state = {
+      playing: false
+    }
+  }
+
   componentDidMount() {
     scroll.scrollToTop();
   }
 
   toggleVideo = () => {
+    this.setState({playing: true})
     scroll.scrollToBottom()
   }
 
   render () {
-
-    return (
+    return !this.state.playing ? 
       <>
-        <div className='home' style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+        <div className='home' style={{display: 'flex', justifyContent: 'center', alignItems: 'center',  background: '#ffed94 '}}>
           <div>
             <h1>To</h1>
             <h1>Mr & Mrs</h1>
@@ -25,10 +32,10 @@ class App extends Component {
               </div>
           </div>
         </div>
-        <Embed className="video" id='342157577' placeholder='./happy.jpg' source='vimeo' />
-      </>
-    );
+      </> :  <Embed className="video" id='342157577' defaultActive source='vimeo' style={{padding: 0}}  />
   }
 }
+
+// iframe={{ allowFullScreen: true, height: '500px' }}
 
 export default App;
