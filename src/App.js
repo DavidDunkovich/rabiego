@@ -36,6 +36,4 @@ class App extends Component {
   }
 }
 
-// iframe={{ allowFullScreen: true, height: '500px' }}
-
 export default App;
